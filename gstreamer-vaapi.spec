@@ -1,11 +1,11 @@
 Summary:	VA-API acceleration for GStreamer
 Name:		gstreamer-vaapi
-Version:	0.5.6
-Release:	2
+Version:	0.5.7
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.freedesktop.org/software/vaapi/releases/gstreamer-vaapi/gstreamer-vaapi-%{version}.tar.bz2
-# Source0-md5:	0a3e645d12c8f275e8ea221ecb89f981
+# Source0-md5:	50d4009c8c85bae55217fcc911243df8
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib-devel
@@ -78,12 +78,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files libs
 %defattr(644,root,root,755)
-%attr(755,root,root) %ghost %{_libdir}/libgstvaapi*-1.0.so.?
-%attr(755,root,root) %{_libdir}/libgstvaapi*-1.0.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgstvaapi*-1.2.so.?
+%attr(755,root,root) %{_libdir}/libgstvaapi*-1.2.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libgstvaapi*-1.0.so
-%{_includedir}/gstreamer-1.0/gst/vaapi
-%{_pkgconfigdir}/*-1.0.pc
+%attr(755,root,root) %{_libdir}/libgstvaapi*-1.2.so
+%{_includedir}/gstreamer-1.2/gst/vaapi
+%{_pkgconfigdir}/*-1.2.pc
 
