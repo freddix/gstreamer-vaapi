@@ -1,11 +1,11 @@
 Summary:	VA-API acceleration for GStreamer
 Name:		gstreamer-vaapi
-Version:	0.5.8
+Version:	0.5.9
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.freedesktop.org/software/vaapi/releases/gstreamer-vaapi/gstreamer-vaapi-%{version}.tar.bz2
-# Source0-md5:	375ddbab556e53ccc311b792f2c649a7
+# Source0-md5:	d213d22affbb2d65ebf6107fec69999b
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib-devel
@@ -75,15 +75,19 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS README
 %attr(755,root,root) %{_libdir}/gstreamer-1.0/libgstvaapi.so
+%attr(755,root,root) %{_libdir}/gstreamer-1.0/libgstvaapi_parse.so
 
 %files libs
 %defattr(644,root,root,755)
-%attr(755,root,root) %ghost %{_libdir}/libgstvaapi*-1.2.so.?
-%attr(755,root,root) %{_libdir}/libgstvaapi*-1.2.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgstcodecparsers_vpx.so.0
+%attr(755,root,root) %ghost %{_libdir}/libgstvaapi*-1.4.so.?
+%attr(755,root,root) %{_libdir}/libgstcodecparsers_vpx.so.*.*.*
+%attr(755,root,root) %{_libdir}/libgstvaapi*-1.4.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libgstvaapi*-1.2.so
-%{_includedir}/gstreamer-1.2/gst/vaapi
-%{_pkgconfigdir}/*-1.2.pc
+%attr(755,root,root) %{_libdir}/libgstcodecparsers_vpx.so
+%attr(755,root,root) %{_libdir}/libgstvaapi*-1.4.so
+%{_includedir}/gstreamer-1.0/gst/vaapi
+%{_pkgconfigdir}/*-1.0.pc
 
