@@ -1,11 +1,11 @@
 Summary:	VA-API acceleration for GStreamer
 Name:		gstreamer-vaapi
-Version:	0.5.9
+Version:	0.5.10
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.freedesktop.org/software/vaapi/releases/gstreamer-vaapi/gstreamer-vaapi-%{version}.tar.bz2
-# Source0-md5:	d213d22affbb2d65ebf6107fec69999b
+# Source0-md5:	3bd90b696b644be943450ba0c1497193
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib-devel
